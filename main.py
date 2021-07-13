@@ -1,29 +1,28 @@
 import os
 import discord
-from repeater import repeat
+from repeat import repeater
 
 #############################################################################################
 #
-#discord 
+#discord
 client = discord.Client()
 
 
 @client.event
 async def on_ready():
-  print('We have login in as {0.user}'.format(client))
-  repeat(client)
+	print('We have login in as {0.user}'.format(client))
+	repeater.start(client)
+
 
 # @client.event
-# async def on_message(message):  
+# async def on_message(message):
 #   if message.author == client.user:
 #     return
 
-#   if any(word in message.content.lower() for word in twords): 
-#     myPost = await get_first_threads() 
+#   if any(word in message.content.lower() for word in twords):
+#     myPost = await get_first_threads()
 #     channel = client.get_channel(862264953044992000) #test2 channel
 #     await channel.send(myPost)
-
-
 
 # client.loop.create_task(get_first_threads())
 
@@ -39,9 +38,6 @@ async def on_ready():
 # printit()
 #@client.event
 ##async def client.on(mess#
-  
-
-
 
 #lient.channels.get('862264953044992000').send('Hello here!')
 #   #if message.content.startswith('inspire'):

@@ -196,6 +196,14 @@ prompt-toolkit = "1.0.15"
 pygments = "*"
 
 [[package]]
+name = "repeater"
+version = "1.0.0"
+description = "A simple printer for nested lists"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "requests"
 version = "2.25.1"
 description = "Python HTTP for Humans."
@@ -289,7 +297,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6bf862f631a1a801d1a79a956ba3833813113b136082aa82aabbf9e4100b2561"
+content-hash = "dd83f471bd01bf7993d0d2f1ff2d973151fba9836ee5c525461b471810ade41f"
 
 [metadata.files]
 aiohttp = [
@@ -429,6 +437,9 @@ pygments = [
 redditcli = [
     {file = "redditcli-2.1.0-py3-none-any.whl", hash = "sha256:c993da77e59d6251efa6736845b7876a9935b152da2ceb6e7c1123e1e1dc0974"},
     {file = "redditcli-2.1.0.tar.gz", hash = "sha256:4894ff3e22b00249d92d0a967139aa5c8090abe39fb622757a56ad482201e9d0"},
+]
+repeater = [
+    {file = "repeater-1.0.0.zip", hash = "sha256:1b4a1e34119842071148ed4885a340b4efdbdcaaf46b5d54957ede32f1f11257"},
 ]
 requests = [
     {file = "requests-2.25.1-py2.py3-none-any.whl", hash = "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"},

@@ -28,10 +28,8 @@ def get_new_threads():
   res = requests.get("https://oauth.reddit.com/r/buildapcsales/new", headers=headers, params={'limit': '1'})
   for post in res.json()['data']['children']:
     if post['kind'] == 't3':
-      # fullname = post['kind']+ '_' + post['data']['id']
       title = post['data']['title']
       url = post['data']['url']
-      # text = "Title: {title} \n Url: {url}".format(title = title, url = url)
       cur_json = {
         "title" : title,
         "url" : url
@@ -43,8 +41,4 @@ def get_first_threads():
   postdata = get_new_threads()[0]
   redpost = postdata['title'] + "\n" + postdata['url'] 
   return redpost
-  #print(redpost + '\n')
-  #print("dpne")
-  # while(True):
-  #   print('loop')
-  #   await asyncio.sleep(1
+1
