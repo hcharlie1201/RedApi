@@ -1,17 +1,27 @@
-import os
 import discord
-from repeat import repeater
+from repeat import Repeater
+from common import  get_first_threads, os, list_of_channels
 
-#############################################################################################
-#
 #discord
 client = discord.Client()
 
+#url keys
 
 @client.event
 async def on_ready():
-	print('We have login in as {0.user}'.format(client))
-	repeater.start(client)
+  print('We have login in as {0.user}'.format(client))
+  firstRepeater = Repeater(list_of_channels["TEST"], get_first_threads, "MEMES")
+  firstRepeater.repeater.start(client)
+  secondRepeater = Repeater(list_of_channels["TEST2"], get_first_threads, "FUNNY")
+  secondRepeater.repeater.start(client)
+
+
+
+
+
+
+
+
 
 
 # @client.event
